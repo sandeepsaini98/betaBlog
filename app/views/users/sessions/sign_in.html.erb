@@ -1,0 +1,9 @@
+<%= form_with(model: @user, url: users_login_path, local: true) do |form| %>
+  <%= form.label :email %>
+  <%= form.email_field 'user[email]' %>
+
+  <%= form.label :password %>
+  <%= form.password_field 'user[password]' %>
+
+  <%= form.submit "Log In" %>
+<% end %>

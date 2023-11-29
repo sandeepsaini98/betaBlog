@@ -1,0 +1,15 @@
+<%= form_with(model: @user, url: users_signup_path, local: true) do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field 'user[name]' %>
+
+  <%= form.label :email %>
+  <%= form.email_field 'user[email]' %>
+
+  <%= form.label :password %>
+  <%= form.password_field 'user[password]' %>
+
+  <%= form.label :password_confirmation %>
+  <%= form.password_field 'user[password_confirmation]' %>
+
+  <%= form.submit "Submit" %>
+<% end %>
